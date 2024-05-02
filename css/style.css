@@ -1,0 +1,958 @@
+/* MISE EN PAGE */
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    /* max-width: 90%;*/
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ALIGNEMENTS */
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.text-center,
+.btn {
+    text-align: center;
+}
+
+.text-rigth {
+    text-align: right;
+}
+
+.text-left,
+.une-offre li {
+    text-align: left;
+}
+
+p,
+.text-justify {
+    text-align: justify;
+}
+
+/* DIMENSIONS DES ELEMENTS */
+
+.h-auto,
+.img-responsive {
+    height: auto;
+}
+
+.large-100,
+input,
+select,
+button,
+.img-responsive {
+    width: 100%;
+}
+
+.large-98 {
+    width: 98%;
+}
+
+.large-90 {
+    width: 90%;
+}
+
+.large-84 {
+    width: 82%;
+}
+
+.large-75 {
+    width: 73%;
+}
+
+
+.large-66 {
+    width: 63%;
+}
+
+.large-50 {
+    width: 48%;
+}
+
+.large-37 {
+    width: 35%;
+}
+
+.large-33 {
+    width: 31%;
+}
+
+.large-25 {
+    width: 23%;
+}
+
+.large-20 {
+    width: 18%;
+}
+
+.large-20b {
+    width: 20%;
+}
+
+.large-16 {
+    width: 15%;
+}
+
+.large-10 {
+    width: 10%;
+}
+
+header img {
+    width: auto;
+    max-height: 72px;
+}
+
+
+/* DISPLAY */
+
+.large-none {
+    display: none;
+}
+
+.block,
+footer a {
+    /*    utile ? */
+    display: block;
+}
+
+.inline-block,
+header li,
+.btn,
+input,
+select {
+    display: inline-block;
+}
+
+/* POSITIONS */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+.cadre-header {
+    width: 100%;
+    height: 107px;
+    /* taille header */
+    background-color: black;
+}
+
+#sommaire {
+    position: fixed;
+    width: 100%;
+    top: 107px;
+    left: 0px;
+    z-index: 2;
+}
+
+.slogan {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    z-index: 3;
+}
+
+.retour-haut {
+    position: fixed;
+    bottom: 24px;
+    right: 16px;
+    width: 24px;
+    height: auto;
+    z-index: 5;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+}
+
+.diapo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    /* les diapos qui n'ont pas la classe img-active ne sont pas visibles */
+    transition: opacity 0.8s ease;
+}
+
+
+.slider .diapo:first-child {
+    /* on utilise une des images pour remplir la div et lui donner la bonne taille */
+    position: static;
+
+}
+
+.img-active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.flecheDroite,
+.flecheGauche {
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/large/Icon-ionic-ios-arrow-back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+}
+
+.flecheGauche {
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.flecheDroite {
+    right: 16px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* sous menu */
+li {
+    position: relative;
+}
+
+li .sousmenu {
+    position: absolute;
+    padding: 16px;
+    width: 189px;
+    height: fit-content;
+    top: 18px;
+    left: -8px;
+}
+
+.sousmenu a,
+.sousmenu2 a {
+    display: block;
+    padding-bottom: 16px;
+}
+
+.sousmenu a:last-of-type,
+.sousmenu2 a:last-of-type {
+    padding-bottom: 0;
+}
+
+li .sousmenu {
+    display: none;
+}
+
+li:hover .sousmenu,
+label {
+    display: block;
+}
+
+/* aside */
+
+aside {
+    position: sticky;
+    height: fit-content;
+    width: 190px;
+    top: 157px;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+
+/* COULEURS */
+/*
+Noir black
+Doré #B59760
+Gris clair #DEDEDE
+Gris foncé #707070
+Blanc white
+*/
+
+/* gestion des erreurs de saisie */
+.erreur-saisie {
+    border: 2px solid red;
+}
+
+.erreur {
+    color: red;
+}
+
+/* FONDS */
+
+.slogan {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* opacité seulement sur le fond */
+}
+
+#contact form,
+form div,
+input,
+select,
+#sommaire {
+    background-color: white;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer,
+.sousmenu {
+    background-color: black;
+}
+
+.galerie,
+.concept,
+.adresse-hotel,
+#hotel aside,
+#contact {
+    background-color: #DEDEDE;
+}
+
+/* OMBRE */
+#sommaire {
+    box-shadow: 0px 3px 3px -2px #DEDEDE;
+    /* h v flou taille */
+}
+
+/* BORDURES */
+
+.adresse-hotel {
+    border: 1px solid black;
+
+}
+
+fieldset,
+input,
+select {
+    border: none;
+}
+
+#contact input,
+.adresse-hotel {
+    border: 1px solid black;
+}
+
+#description,
+#services,
+#localisation,
+#avis,
+.avis {
+    border-bottom: 1px solid black;
+}
+
+.avis:last-of-type {
+    border-bottom: none;
+}
+
+.border-rigth {
+    border-right: 1px solid black;
+}
+
+/* BOUTONS */
+
+.btn1 {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn1:hover {
+    border: 1px solid #B59760;
+    color: #B59760;
+}
+
+.btn2 {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #B59760;
+    color: black;
+}
+
+.btn3 {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.btn3:hover {
+    background-color: #B59760;
+}
+
+/* POLICES */
+/*
+font-family: 'Alice', serif;
+font-family: 'Medula One', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* familles */
+p,
+header a,
+footer a,
+.btn,
+.fil-ariane a,
+#localisation a,
+.lien-special,
+#sommaire,
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+#principale h1,
+#principale h3 {
+    font-family: 'Alice', serif;
+}
+
+#principale h2,
+h4,
+#hotel h1,
+#hotel h3 {
+    font-family: 'Medula One', cursive;
+}
+
+/* tailles */
+#contact span,
+.lien-special {
+    font-size: 0.75rem;
+}
+
+p,
+.btn,
+select,
+input::placeholder,
+header a,
+#sommaire,
+footer,
+footer a {
+    font-size: 1rem;
+}
+
+#principale h1,
+#principale h3,
+#hotel h2,
+#hotel h3,
+h4 {
+    font-size: 1.5rem;
+}
+
+#hotel h1,
+#principale h2 {
+    font-size: 2.25rem;
+}
+
+/* couleurs */
+
+header a,
+.sousmenu a,
+#principale h2,
+footer,
+footer a {
+    color: white;
+}
+
+.fil-ariane a,
+.lien-special {
+    color: #707070;
+}
+
+#sommaire,
+.fil-ariane,
+select,
+input::placeholder,
+#localisation a {
+    color: black;
+}
+
+header a:hover,
+footer a:hover,
+.survol,
+.lien-special:hover {
+    /* classe ajoutée en js pour simuler un lien */
+    color: #B59760;
+}
+
+.survol {
+    cursor: pointer;
+}
+
+/* MISE EN FORME DES TEXTES */
+
+.bold,
+.chapeau,
+#sommaire {
+    font-weight: bold;
+}
+
+.italic,
+blockquote {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+header a,
+.btn,
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+
+.fil-ariane a,
+.lien-special {
+    text-decoration: underline;
+}
+
+li {
+    list-style-position: inside;
+}
+
+/* MARGES */
+
+header,
+footer,
+.sousmenu a,
+.slogan,
+.fil-ariane,
+.hotels,
+.galerie,
+.architecture,
+#hotel article,
+#sommaire,
+.padding16 {
+    padding: 16px;
+}
+
+.padding-rigth-16 {
+    padding-right: 16px;
+}
+
+.btn,
+#contact input,
+#contact select {
+    padding: 8px 24px;
+}
+
+#hotel input,
+#hotel select {
+padding: 8px 4px;
+}
+
+form img {
+    padding: 4px 4px;
+}
+
+.sousmenu,
+#hotel aside,
+#contact,
+#contact form,
+.adresse-hotel {
+    padding: 24px;
+}
+
+
+footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* marge entre les différents blocs */
+
+.hotels,
+.concept,
+.architecture,
+.galerie,
+.presse,
+#description,
+#localisation,
+#services,
+#avis,
+#evaluations,
+#contact {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.top-8 {
+    padding-top: 8px;
+}
+
+.top-16 {
+    padding-top: 16px;
+}
+
+.top-24 {
+    padding-top: 24px;
+}
+
+.top-36 {
+    padding-top: 36px;
+}
+
+.bottom-48 {
+    padding-bottom: 48px;
+}
+
+.padding-right-24 {
+    padding-right: 24px;
+}
+
+/* decalage pour header fixe + sommaire page hotel */
+.fil-ariane {
+    margin-top: 64px;
+}
+
+/* remonter titres noms hotels sur les images */
+.hotels h2 {
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+s .title,
+.margin-top-24 {
+    margin-top: 24px;
+}
+
+.margin-top-16 {
+    margin-top: 16px;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+#hotel h1 {
+    margin-bottom: 48px;
+}
+
+#hotel h2,
+#hotel h3,
+#principale h1,
+#principale h3 {
+    margin-bottom: 24px;
+}
+
+main p,
+h4,
+.margin-bottom,
+#avis img {
+    margin-bottom: 16px;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+#sommaire p {
+    margin-bottom: 0;
+}
+
+.left-8 {
+    margin-left: 8px;
+}
+
+.nom-avis {
+    margin-left: 16px;
+}
+
+#services .ligne-services,
+.left-24 {
+    margin-left: 24px;
+}
+
+#confirmation,
+.date-avis {
+    margin-left: 48px;
+}
+
+.right-16 {
+    margin-right: 16px;
+}
+
+header a,
+#sommaire p,
+footer a,
+.right-24 {
+    margin-right: 24px;
+}
+
+
+
+footer a:last-of-type {
+    margin-right: 0;
+}
+
+.margin0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* MEDIAS QUERIES */
+
+
+/* MEDIUM */
+@media all and (min-width: 781px) and (max-width: 935px) {
+
+    .medium-none {
+        display: none;
+    }
+
+    .medium-block {
+        display: block;
+    }
+
+    .medium-100 {
+        width: 100%;
+    }
+
+    .medium-50 {
+        width: 48%;
+    }
+
+    .medium-25 {
+        width: 23%;
+    }
+
+    .medium-10 {
+        width: 10%;
+    }
+
+    /* menu lateral à reprendre si media medium */
+    /* menu lateral */
+    .lateral {
+        display: block;
+        background-color: #707070;
+        padding: 32px;
+        width: 250px;
+        position: fixed;
+        top: 107px;
+        right: 0;
+        height: fit-content;
+        transition: transform 0.5s ease;
+        z-index: 11;
+    }
+
+    .lateral ul li {
+        list-style: none;
+    }
+
+    .lateral nav a:not(.btn) {
+        color: white;
+    }
+
+    .lateral nav a:not(.btn):hover {
+        color: #B59760;
+    }
+
+    .lateral a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .menu-cache {
+        transform: translateX(250px);
+    }
+
+    .lateral a,
+    .lateral li {
+        margin-bottom: 16px;
+    }
+
+    .lateral li:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .sousmenu2 {
+        margin-top: 16px;
+        margin-left: 32px;
+    }
+
+    .medium-right0 {
+        margin-right: 0;
+    }
+
+    .concept {
+        background-color: white;
+        ;
+    }
+
+}
+
+
+/* SMALL */
+@media all and (max-width: 780px) {
+
+    .small-container {
+        max-width: 600px;
+    }
+
+    .small-none {
+        display: none;
+    }
+
+    .small-block,
+    li .btn {
+        display: block;
+    }
+
+    .small-inline-block {
+        display: inline-block;
+    }
+
+    .small-justify-center {
+        justify-content: center;
+    }
+
+    .small-text-center {
+        text-align: center;
+    }
+
+    .small-100,
+    .btn {
+        width: 100%;
+    }
+
+    .small-33 {
+        width: 33%;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    /* changer l'ordre des éléments dans architecture */
+    .echange {
+        order: -1;
+    }
+
+    /* menu lateral */
+    .lateral {
+        display: block;
+        background-color: #707070;
+        padding: 32px;
+        width: 250px;
+        position: fixed;
+        top: 107px;
+        right: 0;
+        height: fit-content;
+        transition: transform 0.5s ease;
+        z-index: 11;
+    }
+
+    .lateral ul li {
+        list-style: none;
+    }
+
+    .lateral nav a:not(.btn) {
+        color: white;
+    }
+
+    .lateral nav a:not(.btn):hover {
+        color: #B59760;
+    }
+
+    .lateral a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .menu-cache {
+        transform: translateX(250px);
+    }
+
+    .lateral a,
+    .lateral li {
+        margin-bottom: 16px;
+    }
+
+    .lateral li:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .sousmenu2 {
+        margin-top: 16px;
+        margin-left: 32px;
+    }
+
+
+    .small-margin-top {
+        margin-top: 48px;
+    }
+
+    .small-right0 {
+        margin-right: 0;
+    }
+
+    .small-padding0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .concept {
+        background-color: white;
+        ;
+    }
+
+    .small-top-8 {
+        margin-top: 8px;
+    }
+}
