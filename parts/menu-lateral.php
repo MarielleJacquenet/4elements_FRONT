@@ -6,10 +6,10 @@
                 <a href="enconstruction.php" title="">Nos hotels</a>
                 <ul class="sousmenu2">
                     <li>
-                        <a href="enconstruction.php" title="Découvrez notre hôtel AIR">Hotel AIR</a>
+                        <a href="hotel-EAU.php" title="Découvrez notre hôtel EAU">Hotel EAU</a>
                     </li>
                     <li>
-                        <a href="hotel-EAU.php" title="Découvrez notre hôtel EAU">Hotel EAU</a>
+                        <a href="enconstruction.php" title="Découvrez notre hôtel AIR">Hotel AIR</a>
                     </li>
                     <li>
                         <a href="enconstruction.php" title="Découvrez notre hôtel FEU">Hotel FEU</a>
